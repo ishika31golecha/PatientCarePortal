@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage'
 import CameraFeed from './components/CameraFeed'
 import NewReg from './pages/NewReg'
 import RegistrationSuccess from './pages/RegistrationSuccess'
+import PatientDisplay from './pages/PatientDisplay'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/camera-feed' element={<CameraFeed/>}/>
         <Route path='/new-reg' element={<NewReg/>}/>
         <Route path='/registration-success' element={<RegistrationSuccess/>}/>
+        <Route path='/patient/:regNumber' element={<PatientDisplay/>}/>
       </Routes>
       
     </div>

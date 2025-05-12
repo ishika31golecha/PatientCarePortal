@@ -80,4 +80,35 @@ router.get('/:regNumber', async (req, res) => {
     }
 });
 
+// Update patient by registration number
+router.put('/:regNumber', async (req, res) => {
+    try {
+        const updatedPatient = await PatientReg.findOneAndUpdate(
+            { regNumber: req.params.regNumber },
+            req.body,
+            { new: true, runValidators: true }
+        );
+        
+        if (!updatedPatient) {
+            return res.status(404).json({ 
+                success: false, 
+                message: 'Patient not found' 
+            });
+        }
+        
+        res.status(200).json({ 
+            success: true, 
+            message: 'Patient updated successfully',
+            patient: updatedPatient 
+        });
+    } catch (error) {
+        console.error('Error updating patient:', error);
+        res.status(500).json({ 
+            success: false, 
+            message: 'Error updating patient', 
+            error: error.message 
+        });
+    }
+});
+
 module.exports = router;
