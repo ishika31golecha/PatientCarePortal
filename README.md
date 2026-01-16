@@ -1,7 +1,5 @@
 # PatientCarePortal
 
-# PatientCarePortal
-
 PatientCarePortal is a full-stack web application designed to streamline **hospital patient management**, including **patient registration**, **real-time alerts**, **doctor history tracking**, and **efficient staff workflows**.
 
 This portal helps hospitals manage patients, doctors, and critical event alerts with a user-friendly dashboard and secure data handling.
