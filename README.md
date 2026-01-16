@@ -35,6 +35,9 @@ This project is ideal for hospitals, clinics, and healthcare providers looking t
 
 ## Tech Stack
 
+**Designing**
+- Figma
+
 **Frontend:**  
 - React.js (Vite)  
 - Tailwind CSS  
